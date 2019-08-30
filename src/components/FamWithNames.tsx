@@ -1,11 +1,11 @@
 import * as React from "react";
 
-interface IFamProps {
+interface IFamilyProps {
     famName: string;
 }
 
-const FamWithProps: React.FC<IFamProps> = ({ famName }) => {
-    return (<div>Hello, {famName}!</div>);
+const Family = (props: IFamilyProps) => {
+    return (<div>Hello, {props.famName}!</div>);
 };
 
-export default FamWithProps;
+export default Family;
