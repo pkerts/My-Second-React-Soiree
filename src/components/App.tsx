@@ -1,22 +1,27 @@
 import * as React from "react";
 import "./../assets/scss/App.scss";
+import family from "./family.json";
 import FamWithProps from "./FamWithNames";
 
 const App = () => {
     return (
         <div className="app">
             <h1>Hello World!</h1>
-            <p>Lauren Rose Tsiprin</p>
-            <p>Ava Michelle Tsiprin</p>
-            <p>Bella Tsiprin</p>
-            <p>Ken Tsiprin</p>
-            <p>Ilia Kertsman</p>
-            <p><FamWithProps famName="Ilyusha" /></p>
-            <p>Victoriya Kertsman</p>
-            <p>Philip Kertsman</p>
-            <img src="https://lh6.googleusercontent.com/-wXMaeltmbKM/AAAAAAAAAAI/AAAAAAAAABs/mPp_CQmfRyQ/photo.jpg"
-            height="480"/>
-            <img src="https://s3-media4.fl.yelpcdn.com/bphoto/znU03ZDGJzMNGgFD97UF4A/o.jpg" height="480"/>
+            <p>{family.sister}</p>
+            <p>{family.brother}</p>
+            <div>
+                <ol>
+                    <p>- {family.neiceone}</p>
+                    <p>- {family.neicetwo}</p>
+                </ol>
+            </div>
+            <p>{family.dad}</p>
+            <p><FamWithProps famName={family.dad} /></p>
+            <p>{family.mom}</p>
+            <p>{family.me}</p>
+            <p>{family.friend}</p>
+            <img src={family.sisterphoto} height="480"/>
+            <img src={family.brotherphoto} width="480"/>
         </div>
     );
 };
